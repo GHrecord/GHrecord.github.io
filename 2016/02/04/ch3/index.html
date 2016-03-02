@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>图片滚动显示 - GHrecord</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="实现一个类似百度图片切换播放的例子">
+<meta property="og:type" content="article">
+<meta property="og:title" content="图片滚动显示">
+<meta property="og:url" content="http://yoursite.com/2016/02/04/ch3/index.html">
+<meta property="og:site_name" content="GHrecord">
+<meta property="og:description" content="实现一个类似百度图片切换播放的例子">
+<meta property="og:image" content="http://i.imgur.com/afbIZxO.png">
+<meta property="og:image" content="http://i.imgur.com/afbIZxO.png">
+<meta property="og:image" content="http://i.imgur.com/eUl3rlk.png">
+<meta property="og:image" content="http://i.imgur.com/bWkgzG3.png">
+<meta property="og:updated_time" content="2016-03-02T03:11:07.191Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="图片滚动显示">
+<meta name="twitter:description" content="实现一个类似百度图片切换播放的例子">
+<meta name="twitter:image" content="http://i.imgur.com/afbIZxO.png">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo" href="/"></a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+    <section id="main" class="outer"><article id="post-ch3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      图片滚动显示
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/02/04/ch3/" class="article-date">
+  <time datetime="2016-02-03T16:00:00.000Z" itemprop="datePublished">2016-02-04</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/小例子/">小例子</a>
+  </div>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://i.imgur.com/afbIZxO.png" alt=""><br>实现一个类似百度图片切换播放的例子</p>
+<a id="more"></a>
+<ol>
+<li>示例</li>
+<li>javascript dom操作</li>
+<li>javascropt事件</li>
+<li>javascript作用域闭包</li>
+</ol>
+<p>功能：</p>
+<ul>
+<li>有大图和缩略图</li>
+<li>有上一张图和下一张图切换</li>
+<li>可以键盘控制显示上一张图和下一张图</li>
+<li>有显示上一组和下一组的功能</li>
+</ul>
+<p>效果预览：<br>可以类似目前的百度图片中的效果<br><img src="http://i.imgur.com/afbIZxO.png" alt=""></p>
+<p>基本HTML结构和CSS代码：<br>html：</p>
+<pre><code>&lt;body&gt;
+    &lt;h1&gt;图片展示&lt;/h1&gt;
+    &lt;div id=&quot;pics&quot;&gt;
+        &lt;div id=&quot;bigpic&quot;&gt;
+            &lt;span id=&quot;big-prev&quot;&gt;&lt;/span&gt;
+            &lt;img src=&quot;image/000.jpg&quot; width=&quot;650&quot; height=&quot;400&quot;&gt;
+            &lt;span id=&quot;big-next&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;smallPics&quot;&gt;
+            &lt;span id=&quot;li-prev&quot;&gt;&lt;/span&gt;
+            &lt;ul id=&quot;smallPicsList&quot;&gt;&lt;/ul&gt;
+            &lt;span id=&quot;li-next&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;demo2.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+</code></pre><p>主要css代码：</p>
+<pre><code>#big-prev {
+    background: url(&quot;big-prev.png&quot;);
+    display: inline-block;
+    width: 60px;
+    height: 120px;
+    cursor: pointer;
+    float: left;
+    margin-top: 120px;
+}
+
+#li-prev {
+    background: url(&quot;icon_prve.jpg&quot;);
+    display: inline-block;
+    height:40px;
+    width:20px;
+    display: inline-block;
+    float: left;
+    cursor:pointer;
+}
+</code></pre><p>效果：<br><img src="http://i.imgur.com/eUl3rlk.png" alt=""></p>
+<p>下面是主要的js代码：<br>首先要将图片按照分组显示在下边的列表里。<br>    var eg = new Object();</p>
+<pre><code>//定义图片数据
+eg.$ = function(id){
+    return document.getElementById(id);
+};
+
+eg.data = [&quot;000.jpg&quot;,&quot;001.jpg&quot;,&quot;002.jpg&quot;,&quot;003.jpg&quot;,&quot;004.jpg&quot;,
+            &quot;005.jpg&quot;,&quot;006.jpg&quot;,&quot;007.jpg&quot;];
+
+eg.showNum = 0; //默认显示
+eg.groupNum = 1; //当前组数
+eg.groupSize = 5; //每组图片数
+
+eg.showSmall = function(group){
+    var ul = eg.$(&quot;smallPicsList&quot;);
+    //每次显示前清空旧的数据
+    ul.innerHTML = &apos;&apos;;
+    var start = (group-1)*eg.groupSize;
+    var end = group*eg.groupSize;
+    for (var i = start;(i&lt;end&amp;&amp;i&lt;eg.data.length); i++) {
+        var li = document.createElement(&quot;li&quot;);
+        li.innerHTML = &apos;&lt;img src=&quot;image/&apos;+eg.data[i]+&apos;&quot; id=&quot;small&apos;+i+&apos;&quot;width=&quot;135&quot; height=&quot;100&quot;/&gt;&apos;;
+        ul.appendChild(li);
+    };
+};
+
+eg.init = function(){
+    eg.showSmall(1);
+};
+
+eg.init();
+</code></pre><p>效果：<img src="http://i.imgur.com/bWkgzG3.png" alt=""></p>
+<p>接下来要实现点击图片的响应。<br>要在每次生成缩略图片的时候就添加监听器，来监听点击的动作。</p>
+<pre><code>for (var i = start;(i&lt;end&amp;&amp;i&lt;eg.data.length); i++) {
+        var li = document.createElement(&quot;li&quot;);
+        li.innerHTML = &apos;&lt;img src=&quot;image/&apos;+eg.data[i]+&apos;&quot; id=&quot;small&apos;+i+&apos;&quot;width=&quot;135&quot; height=&quot;100&quot;/&gt;&apos;;    
+        (function(i){
+            eg.addListener(li,&quot;click&quot;, function(){
+                eg.showNum = i;
+                eg.showBig();
+                //console.log(i);
+            });    
+    })(i);
+    ul.appendChild(li);}
+</code></pre><p>这里用到了IIFE（立即执行函数表达式），创建了闭包。关于更多javascript作用域闭包的内容，会在后面的文章中介绍<a href="E:\CS\新建文件夹\ch3-2.md" target="_blank" rel="external">点我</a>。</p>
+<p>然后实现点击上（下）一张（组）图按钮，要注意边界图片时缩略图和大图的变化。</p>
+<pre><code>eg.prevBig = function(){
+    //console.log(eg.showNum);
+    if (eg.showNum-1&gt;=0) {
+        if ((eg.showNum)%eg.groupSize ==0) {
+            eg.showSmall(eg.groupNum-1);
+            eg.groupNum--;
+        };
+        eg.showNum--;
+        eg.showBig();
+    }else{
+        alert(&quot;已经是第一张了！&quot;);
+    }
+};
+
+eg.prevsmall = function(){
+    console.log(eg.groupNum);
+    if(eg.groupNum -1 &gt;=1){
+        eg.showSmall(eg.groupNum-1);
+        eg.groupNum--;
+        eg.showNum = eg.groupNum*eg.groupSize-eg.groupSize;
+        eg.showBig();
+    }
+};
+
+eg.addListener(eg.$(&quot;big-prev&quot;),&quot;click&quot;,function(){
+    eg.prevBig();
+});
+
+eg.addListener(eg.$(&quot;li-prev&quot;),&quot;click&quot;,function(){
+    eg.prevsmall();
+});
+</code></pre><p>至此，基本功能已经实现，还有键盘动作。</p>
+<pre><code>eg.addListener(document,&quot;keyup&quot;,function(e){
+    e = e||event;
+    if (e.keyCode == 37) {eg.prevBig();};
+    if (e.keyCode == 39) {eg.nextBig();};
+});
+</code></pre><h3 id="javascript-DOM操作"><a href="#javascript-DOM操作" class="headerlink" title="javascript DOM操作"></a>javascript DOM操作</h3><h3 id="javascript事件"><a href="#javascript事件" class="headerlink" title="javascript事件"></a>javascript事件</h3><h3 id="javascript作用域闭包"><a href="#javascript作用域闭包" class="headerlink" title="javascript作用域闭包"></a>javascript作用域闭包</h3>
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/front-end/">front end</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/01/31/ch1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">收藏夹工具示例&nbsp;<span>&gt;</span></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Heng Guo&nbsp;
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>
