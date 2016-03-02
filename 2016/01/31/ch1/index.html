@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>收藏夹工具示例 - GHrecord</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="浏览器的收藏夹也会执行javascript代码，一段简单的代码实现右键收藏，删掉网页Img元素图片。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="收藏夹工具示例">
+<meta property="og:url" content="http://yoursite.com/2016/01/31/ch1/index.html">
+<meta property="og:site_name" content="GHrecord">
+<meta property="og:description" content="浏览器的收藏夹也会执行javascript代码，一段简单的代码实现右键收藏，删掉网页Img元素图片。">
+<meta property="og:image" content="http://i.imgur.com/e6ANfp4.png">
+<meta property="og:updated_time" content="2016-03-02T02:52:51.881Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="收藏夹工具示例">
+<meta name="twitter:description" content="浏览器的收藏夹也会执行javascript代码，一段简单的代码实现右键收藏，删掉网页Img元素图片。">
+<meta name="twitter:image" content="http://i.imgur.com/e6ANfp4.png">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo" href="/"></a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+    <section id="main" class="outer"><article id="post-ch1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      收藏夹工具示例
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/01/31/ch1/" class="article-date">
+  <time datetime="2016-01-30T16:00:00.000Z" itemprop="datePublished">2016-01-31</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/default/">default</a>
+  </div>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="2016-1-31"><a href="#2016-1-31" class="headerlink" title="2016.1.31"></a>2016.1.31</h3><h2 id="收藏夹工具示例："><a href="#收藏夹工具示例：" class="headerlink" title="收藏夹工具示例："></a>收藏夹工具示例：</h2><p><img src="http://i.imgur.com/e6ANfp4.png" alt=""><br>浏览器的收藏夹也会执行Javascript代码。<br>右键收藏，删掉网页Img元素图片<br>(IE,Firefox可以，Chorme不行)。</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;favorite&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;a href=&quot;
+    javascript:\void(function(){
+    var imgs=document.getElementsByTagName(&apos;img&apos;);
+    for(var i=imgs.length-1;i&gt;=0;i--){
+        imgs[i].parentElement.removeChild(imgs[i]);};})()&quot;&gt;
+    右键收藏：删掉网页img元素图片&lt;/a&gt;
+ &lt;/body&gt;
+&lt;/html&gt; 
+</code></pre><h2 id="类似应用："><a href="#类似应用：" class="headerlink" title="类似应用："></a>类似应用：</h2><p><a href="http://ruyi.taobao.com/bookmarklet" target="_blank" rel="external">淘宝工具“如意淘”</a><br><a href="http://pinyin.sogou.com/cloud/" target="_blank" rel="external">搜狗云输入法</a><br><a href="http://note.youdao.com/web-clipper.html" target="_blank" rel="external">有道云笔记网页剪报</a></p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/front-end/">front end</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/03/01/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-title"><span>&lt;</span>&nbsp;
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Heng Guo&nbsp;
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>
