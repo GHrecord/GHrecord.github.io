@@ -1,0 +1,38 @@
+nav .a{color: #82f4de;}
+
+nav .b{color: rgb(255, 232, 139);}
+
+nav .c{color: #fff;}
+
+nav .d{color: #39ea91;}
+
+nav .e{color: rgb(34, 181, 115);}
+
+nav {display: none;}
+
+.intro {
+	font-family: 'Andale Mono', 'PT Sans', tahoma, sans-serif
+}
+
+.content {
+	height: 660px;
+	
+	padding: 20px 80px;
+
+}
+
+#about {
+	background: rgb(34, 181, 115);
+}
+
+#profession {
+	background: #82f4de;
+}
+
+#project {
+	background: rgb(255, 232, 139);
+}
+
+#contact {
+	background: #fff;
+}
