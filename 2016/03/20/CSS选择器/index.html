@@ -3,23 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>图片滚动显示 | GHrecord</title>
+    <title>CSS选择器和层叠 | GHrecord</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="前端,示例" />
+        <meta name="keywords" content="前端,任务" />
     
-    <meta name="description" content="实现一个类似百度图片切换播放的例子">
+    <meta name="description" content="css的选择器是css中的基本内容，由于前些日子有一道笔试题中出现了一堆我没用过的选择器，所以这里对其进行一下总结。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="图片滚动显示">
-<meta property="og:url" content="http://yoursite.com/2016/02/04/ch3/index.html">
+<meta property="og:title" content="CSS选择器和层叠">
+<meta property="og:url" content="http://yoursite.com/2016/03/20/CSS选择器/index.html">
 <meta property="og:site_name" content="GHrecord">
-<meta property="og:description" content="实现一个类似百度图片切换播放的例子">
-<meta property="og:image" content="http://7xre66.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160302112356.png">
-<meta property="og:updated_time" content="2016-04-08T15:00:18.737Z">
+<meta property="og:description" content="css的选择器是css中的基本内容，由于前些日子有一道笔试题中出现了一堆我没用过的选择器，所以这里对其进行一下总结。">
+<meta property="og:image" content="http://7xre66.com1.z0.glb.clouddn.com/jakeOwen-American-Country-Love-Song.jpg">
+<meta property="og:updated_time" content="2016-04-08T14:59:09.045Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="图片滚动显示">
-<meta name="twitter:description" content="实现一个类似百度图片切换播放的例子">
-<meta name="twitter:image" content="http://7xre66.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160302112356.png">
+<meta name="twitter:title" content="CSS选择器和层叠">
+<meta name="twitter:description" content="css的选择器是css中的基本内容，由于前些日子有一道笔试题中出现了一堆我没用过的选择器，所以这里对其进行一下总结。">
+<meta name="twitter:image" content="http://7xre66.com1.z0.glb.clouddn.com/jakeOwen-American-Country-Love-Song.jpg">
     
 
     
@@ -129,173 +129,165 @@ _st('install','false# enter swiftype install key here','2.0.0');
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-ch3" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-CSS选择器" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        图片滚动显示
+        CSS选择器和层叠
         </h1>
     
 
             </header>
         
         <div class="article-subtitle">
-            <a href="/2016/02/04/ch3/" class="article-date">
-    <time datetime="2016-02-03T16:00:00.000Z" itemprop="datePublished">2016-02-04</time>
+            <a href="/2016/03/20/CSS选择器/" class="article-date">
+    <time datetime="2016-03-19T16:00:00.000Z" itemprop="datePublished">2016-03-20</time>
 </a>
             
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/示例/">示例</a></li></ul>
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/任务/">任务</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 
         </div>
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="http://7xre66.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160302112356.png" alt=""><br>实现一个类似百度图片切换播放的例子</p>
+            <p><img src="http://7xre66.com1.z0.glb.clouddn.com/jakeOwen-American-Country-Love-Song.jpg" alt=""><br>css的选择器是css中的基本内容，由于前些日子有一道笔试题中出现了一堆我没用过的选择器，所以这里对其进行一下总结。</p>
 <a id="more"></a>
-<ol>
-<li>示例</li>
-<li>javascript dom操作</li>
-<li>javascropt事件</li>
-<li>javascript作用域闭包</li>
-</ol>
-<p>功能：</p>
-<ul>
-<li>有大图和缩略图</li>
-<li>有上一张图和下一张图切换</li>
-<li>可以键盘控制显示上一张图和下一张图</li>
-<li>有显示上一组和下一组的功能</li>
+<p>##CSS选择器和层叠</p>
+<h3 id="1-选择器"><a href="#1-选择器" class="headerlink" title="1.选择器"></a>1.选择器</h3><ul>
+<li><h4 id="上下文选择器"><a href="#上下文选择器" class="headerlink" title="上下文选择器"></a>上下文选择器</h4><ul>
+<li>元素选择器</li>
+<li>后代组合式选择器(descendant combinator selector)</li>
 </ul>
-<p>效果预览：<br>可以类似目前的百度图片中的效果<br><img src="http://i.imgur.com/afbIZxO.png" alt=""></p>
-<p>基本HTML结构和CSS代码：<br>html：</p>
-<pre><code>&lt;body&gt;
-    &lt;h1&gt;图片展示&lt;/h1&gt;
-    &lt;div id=&quot;pics&quot;&gt;
-        &lt;div id=&quot;bigpic&quot;&gt;
-            &lt;span id=&quot;big-prev&quot;&gt;&lt;/span&gt;
-            &lt;img src=&quot;image/000.jpg&quot; width=&quot;650&quot; height=&quot;400&quot;&gt;
-            &lt;span id=&quot;big-next&quot;&gt;&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div id=&quot;smallPics&quot;&gt;
-            &lt;span id=&quot;li-prev&quot;&gt;&lt;/span&gt;
-            &lt;ul id=&quot;smallPicsList&quot;&gt;&lt;/ul&gt;
-            &lt;span id=&quot;li-next&quot;&gt;&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;script type=&quot;text/javascript&quot; src=&quot;demo2.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-</code></pre><p>主要css代码：</p>
-<pre><code>#big-prev {
-    background: url(&quot;big-prev.png&quot;);
-    display: inline-block;
-    width: 60px;
-    height: 120px;
-    cursor: pointer;
-    float: left;
-    margin-top: 120px;
-}
+</li>
+</ul>
+<ul>
+<li><h4 id="特殊的上下文选择器"><a href="#特殊的上下文选择器" class="headerlink" title="特殊的上下文选择器"></a>特殊的上下文选择器</h4><ul>
+<li><p>子选择器 &gt;</p>
+<pre><code>标签1 &gt; 标签2
+</code></pre><p>  <strong>标签2必须是标签1的子元素</strong>，或者反过来说，标签1必须是标签2的父元素。与常规的上下文选择符不同，这个选择符中的标签1不能是标签2的父元素之外的其他祖先元素。</p>
+</li>
+<li><p>紧邻同胞选择器 +</p>
+<pre><code>标签1 + 标签2
+</code></pre><p>  标签2<strong>必须紧跟</strong>在其<strong>同胞</strong>标签1的后面。</p>
+</li>
+<li><p>一般同胞选择器 ~</p>
+<pre><code>标签1 ~ 标签2
+</code></pre><p>  标签2必须跟（<strong>不一定紧跟</strong>）在其同胞标签1后面</p>
+</li>
+<li>通用选择器 *</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h4 id="ID和类选择器"><a href="#ID和类选择器" class="headerlink" title="ID和类选择器"></a>ID和类选择器</h4><ul>
+<li><p>什么时候用ID，什么时候用类</p>
+<p>ID的用途是在页面标记中唯一地标识一个特定的元素。它能够为我们编写CSS规则提供必要的上下文，排除无关的标记，而只选择该上下文中的标签。<br>相对来说，类是可以应用给任意多个页面中的任意多个HTML元素的公共标识符，以便我们为这些元素应用相同的CSS样式。而且，使用类也让为不同标签名的元素应用相同的样式成为可能。</p>
+</li>
+</ul>
+</li>
+<li><h4 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h4><ul>
+<li><p>属性名</p>
+<pre><code>标签名[属性名]
+</code></pre><p>选择任何带有属性名的标签名。</p>
+</li>
+<li><p>属性值</p>
+<pre><code>标签名[属性名=&quot;属性值&quot;]
+</code></pre><p>选择任何带有值为属性值的属性名的标签名。</p>
+</li>
+</ul>
+</li>
+<li><h4 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a>伪类</h4><p>  伪类分两种。<br><strong>UI（User Interface，用户界面）伪类</strong>会在HTML元素处于某个状态时（比如鼠标指针位于链接上），为该元素应用CSS样式。</p>
+<ol>
+<li><p><strong>链接伪类</strong></p>
+<p>针对链接的伪类一共有4个，因为链接始终会处于如下4种状态之一。</p>
+<ul>
+<li><strong>Link</strong>。此时，链接就在那儿等着用户点击。</li>
+<li><strong>Visited</strong>。用户此前点击过这个链接。</li>
+<li><strong>Hover</strong>。鼠标指针正悬停在链接上。</li>
+<li><strong>Active</strong>。链接正在被点击（鼠标在元素上按下，还没有释放）。</li>
+</ul>
+<blockquote>
+<p>这4个伪类的特指度相同，要按LVHA的顺序添加使用</p>
+</blockquote>
+</li>
+<li><p><strong>:focus伪类</strong></p>
+<pre><code>e:focus
+</code></pre><p>表单中的文本字段在用户单击它时会获得焦点，然后用户才能在其中输入字符。</p>
+</li>
+<li><p><strong>:target伪类</strong></p>
+<pre><code>e:target
+</code></pre><p>如果用户点击一个指向页面中其他元素的链接，则那个元素就是目标（target），可以用:target伪类选中它。</p>
+<p>例如：对于下面这个链接<br><code>&lt;a href=&quot;#more_info&quot;&gt;More Information&lt;/a&gt;</code><br>位于页面其他地方、ID为more_info的那个元素就是目标。该元素可能是这样的：<br><code>&lt;h2 id=&quot;more_info&quot;&gt;This is the information you are looking for.&lt;/h2&gt;</code><br>那么，如下CSS规则<br><code>#more_info:target {background:#eee;}</code><br>会在用户单击链接转向ID为more_info的元素时，为该元素添加浅灰色背景。</p>
+<blockquote>
+<p>维基百科在其引证中大量使用了:target伪类。维基百科的引证链接就是正文里那些不起眼的数字链接。引证本身则位于长长的页面的最下方。如果没有:target应用的突出显示，很难知道你点击的链接对应着一大堆引证中的哪一个。</p>
+</blockquote>
+</li>
+</ol>
+<p><strong>结构化伪类</strong>会在标记中存在某种结构上的关系时（如某个元素是一组元素中的第一个或最后一个），为相应元素应用CSS样式。</p>
+<ol>
+<li><strong>:first-child和:last-child</strong></li>
+<li><p><strong>:nth-child</strong></p>
+<pre><code>e:nth-child(n)
+</code></pre><p>e表示元素名，n表示一个数值（也可以使用odd或even）</p>
+<blockquote>
+<p>:nth-child伪类最常用于提高表格的可读性</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><h4 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h4><ol>
+<li><strong>::first-letter伪元素</strong></li>
+<li><strong>::first-line伪元素</strong></li>
+<li><strong>::before和::after伪元素</strong><br>可用于在特定元素前面或后面添加特殊内容。<blockquote>
+<p>搜索引擎不会取得伪元素的信息（因为它在标记中并不存在）。因此，不要通过伪元素添加你想让搜索引擎索引的重要内容。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ul>
+<p>###2.层叠</p>
+<ul>
+<li><h4 id="特殊性"><a href="#特殊性" class="headerlink" title="特殊性"></a>特殊性</h4><p>  选择器的特殊性由选择器本身的组件确定。特殊性值表述为4个部分，如：0，0，0，0。一个选择器的具体特殊性如下确定：</p>
+<ul>
+<li><p>对于选择器中给定的各个ID属性值，加0，1，0，0。</p>
+</li>
+<li><p>对于选择器中给定的各个类属性值，属性选择或伪类，加0，0，1，0。</p>
+</li>
+<li><p>对于选择器中给定的各个元素和伪元素，加0，0，0，1。</p>
+</li>
+<li><p>结合符和通配符选择器对特殊性没有任何贡献</p>
+</li>
+</ul>
+</li>
+<li><h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><p>一般地，大多数框模型属性（包括外边距、内边距、背景和边框）都不能继承</p>
+</li>
+<li><h4 id="重要性"><a href="#重要性" class="headerlink" title="重要性"></a>重要性</h4><p>有时某个声明可能非常重要，超过了所有其他声明。CSS2.1称之为重要声明（原因显而易见），并允许在这些声明的结束分号之前插入！important来标志。例如：</p>
+<pre><code>p.dark {color:#333 !important; background: white;}
+</code></pre></li>
+<li><h4 id="层叠"><a href="#层叠" class="headerlink" title="层叠"></a>层叠</h4>CSS就叫做层叠样式表，让样式层叠在一起，这是通过结合继承和特殊性做到的。CSS2.1的层叠规则相当简单：<blockquote>
+<p>找出所有相关的规则，这些规则都包含与一个给定元素匹配的选择器。</p>
+</blockquote>
+</li>
+</ul>
+<ol>
+<li><p>按<strong>显式权重</strong>对应用到该元素的所有声明排序。标志!important的规则的权重要高于没有!important标志的规则。</p>
+</li>
+<li><p>按<strong>来源</strong>对应用到给定元素的所有声明排序。共有3种来源：创作人员、读者和用户代理。正常情况下，创作人员的样式要胜过读者的样式。有!important标志的读者样式要强干所有其他样式，这包括有!important标志的创作人员样式。创作人员样式和读者样式都比用户代理的默认样式要强。</p>
+</li>
+<li><p>按<strong>特殊性</strong>对应用到给定元素的所有声明排序。有较高特殊性的元素权重要大于有较低特殊性的元素。</p>
+</li>
+<li><p>按<strong>出现顺序</strong>对应用到给定元素的所有声明排序。一个声明在样式表或文档中越后出现，它的权重就越大。如果样式表中有导入的样式表，一般认为出现在导入样式表中的声明在前，主样式表中的所有声明在后。</p>
+</li>
+</ol>
 
-#li-prev {
-    background: url(&quot;icon_prve.jpg&quot;);
-    display: inline-block;
-    height:40px;
-    width:20px;
-    display: inline-block;
-    float: left;
-    cursor:pointer;
-}
-</code></pre><p>效果：<br><img src="http://i.imgur.com/eUl3rlk.png" alt=""></p>
-<p>下面是主要的js代码：<br>首先要将图片按照分组显示在下边的列表里。<br>    var eg = new Object();</p>
-<pre><code>//定义图片数据
-eg.$ = function(id){
-    return document.getElementById(id);
-};
-
-eg.data = [&quot;000.jpg&quot;,&quot;001.jpg&quot;,&quot;002.jpg&quot;,&quot;003.jpg&quot;,&quot;004.jpg&quot;,
-            &quot;005.jpg&quot;,&quot;006.jpg&quot;,&quot;007.jpg&quot;];
-
-eg.showNum = 0; //默认显示
-eg.groupNum = 1; //当前组数
-eg.groupSize = 5; //每组图片数
-
-eg.showSmall = function(group){
-    var ul = eg.$(&quot;smallPicsList&quot;);
-    //每次显示前清空旧的数据
-    ul.innerHTML = &apos;&apos;;
-    var start = (group-1)*eg.groupSize;
-    var end = group*eg.groupSize;
-    for (var i = start;(i&lt;end&amp;&amp;i&lt;eg.data.length); i++) {
-        var li = document.createElement(&quot;li&quot;);
-        li.innerHTML = &apos;&lt;img src=&quot;image/&apos;+eg.data[i]+&apos;&quot; id=&quot;small&apos;+i+&apos;&quot;width=&quot;135&quot; height=&quot;100&quot;/&gt;&apos;;
-        ul.appendChild(li);
-    };
-};
-
-eg.init = function(){
-    eg.showSmall(1);
-};
-
-eg.init();
-</code></pre><p>效果：<img src="http://i.imgur.com/RJ6uXoe.png" alt=""></p>
-<p>接下来要实现点击图片的响应。<br>要在每次生成缩略图片的时候就添加监听器，来监听点击的动作。</p>
-<pre><code>for (var i = start;(i&lt;end&amp;&amp;i&lt;eg.data.length); i++) {
-        var li = document.createElement(&quot;li&quot;);
-        li.innerHTML = &apos;&lt;img src=&quot;image/&apos;+eg.data[i]+&apos;&quot; id=&quot;small&apos;+i+&apos;&quot;width=&quot;135&quot; height=&quot;100&quot;/&gt;&apos;;    
-        (function(i){
-            eg.addListener(li,&quot;click&quot;, function(){
-                eg.showNum = i;
-                eg.showBig();
-                //console.log(i);
-            });    
-    })(i);
-    ul.appendChild(li);}
-</code></pre><p>这里用到了IIFE（立即执行函数表达式），创建了闭包。关于更多javascript作用域闭包的内容，会在后面的文章中介绍<a href="E:\CS\新建文件夹\ch3-2.md" target="_blank" rel="external">点我</a>。</p>
-<p>然后实现点击上（下）一张（组）图按钮，要注意边界图片时缩略图和大图的变化。</p>
-<pre><code>eg.prevBig = function(){
-    //console.log(eg.showNum);
-    if (eg.showNum-1&gt;=0) {
-        if ((eg.showNum)%eg.groupSize ==0) {
-            eg.showSmall(eg.groupNum-1);
-            eg.groupNum--;
-        };
-        eg.showNum--;
-        eg.showBig();
-    }else{
-        alert(&quot;已经是第一张了！&quot;);
-    }
-};
-
-eg.prevsmall = function(){
-    console.log(eg.groupNum);
-    if(eg.groupNum -1 &gt;=1){
-        eg.showSmall(eg.groupNum-1);
-        eg.groupNum--;
-        eg.showNum = eg.groupNum*eg.groupSize-eg.groupSize;
-        eg.showBig();
-    }
-};
-
-eg.addListener(eg.$(&quot;big-prev&quot;),&quot;click&quot;,function(){
-    eg.prevBig();
-});
-
-eg.addListener(eg.$(&quot;li-prev&quot;),&quot;click&quot;,function(){
-    eg.prevsmall();
-});
-</code></pre><p>至此，基本功能已经实现，还有键盘动作。</p>
-<pre><code>eg.addListener(document,&quot;keyup&quot;,function(e){
-    e = e||event;
-    if (e.keyCode == 37) {eg.prevBig();};
-    if (e.keyCode == 39) {eg.nextBig();};
-});
-</code></pre><h3 id="javascript-DOM操作"><a href="#javascript-DOM操作" class="headerlink" title="javascript DOM操作"></a>javascript DOM操作</h3><h3 id="javascript事件"><a href="#javascript事件" class="headerlink" title="javascript事件"></a>javascript事件</h3><h3 id="javascript作用域闭包"><a href="#javascript作用域闭包" class="headerlink" title="javascript作用域闭包"></a>javascript作用域闭包</h3>
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://yoursite.com/2016/02/04/ch3/" data-id="cimrti3hr000fzkwydki600ef" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2016/03/20/CSS选择器/" data-id="cimrti3h90007zkwy7j8mq6li" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -362,7 +354,7 @@ eg.addListener(eg.$(&quot;li-prev&quot;),&quot;click&quot;,function(){
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="2016/02/04/ch3/" data-title="图片滚动显示" data-url="http://yoursite.com/2016/02/04/ch3/"></div>
+    <div class="ds-thread" data-thread-key="2016/03/20/CSS选择器/" data-title="CSS选择器和层叠" data-url="http://yoursite.com/2016/03/20/CSS选择器/"></div>
     <style>
         #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;
@@ -466,20 +458,20 @@ eg.addListener(eg.$(&quot;li-prev&quot;),&quot;click&quot;,function(){
         
 <nav id="article-nav">
     
-        <a href="/2016/03/16/3-16-placeholder/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2016/04/05/NaN/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            常用网页占位图片生成网站
+            关于NaN
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2016/01/31/ch1/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2016/03/16/3-16-placeholder/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">收藏夹工具示例</p>
+        <p class="article-nav-title">常用网页占位图片生成网站</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
