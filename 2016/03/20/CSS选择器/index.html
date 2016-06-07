@@ -6,19 +6,19 @@
     <title>CSS选择器和层叠 | GHrecord</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="任务,前端" />
+        <meta name="keywords" content="任务,前端,CSS" />
     
-    <meta name="description" content="css的选择器是css中的基本内容，由于前些日子有一道笔试题中出现了一堆我没用过的选择器，所以这里对其进行一下总结。">
+    <meta name="description" content="css的选择器是css中的基本内容，由于前些日子有一道笔试题中出现了一堆我没用过的选择器，所以这里对其进行一下总结，主要介绍各种选择器类型及用法，层叠的规则。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS选择器和层叠">
 <meta property="og:url" content="http://yoursite.com/2016/03/20/CSS选择器/index.html">
 <meta property="og:site_name" content="GHrecord">
-<meta property="og:description" content="css的选择器是css中的基本内容，由于前些日子有一道笔试题中出现了一堆我没用过的选择器，所以这里对其进行一下总结。">
+<meta property="og:description" content="css的选择器是css中的基本内容，由于前些日子有一道笔试题中出现了一堆我没用过的选择器，所以这里对其进行一下总结，主要介绍各种选择器类型及用法，层叠的规则。">
 <meta property="og:image" content="http://7xre66.com1.z0.glb.clouddn.com/jakeOwen-American-Country-Love-Song.jpg">
-<meta property="og:updated_time" content="2016-04-08T14:59:09.045Z">
+<meta property="og:updated_time" content="2016-06-07T12:07:29.440Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS选择器和层叠">
-<meta name="twitter:description" content="css的选择器是css中的基本内容，由于前些日子有一道笔试题中出现了一堆我没用过的选择器，所以这里对其进行一下总结。">
+<meta name="twitter:description" content="css的选择器是css中的基本内容，由于前些日子有一道笔试题中出现了一堆我没用过的选择器，所以这里对其进行一下总结，主要介绍各种选择器类型及用法，层叠的规则。">
 <meta name="twitter:image" content="http://7xre66.com1.z0.glb.clouddn.com/jakeOwen-American-Country-Love-Song.jpg">
     
 
@@ -66,7 +66,7 @@
                                     <a class="main-nav-list-link" href="/">主页</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/CSS/">CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/前端/">前端</a></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/前端/">前端</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/前端/CSS/">CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/前端/JavaScript/">JavaScript</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/project">任务</a>
@@ -125,7 +125,7 @@ _st('install','false# enter swiftype install key here','2.0.0');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/前端/">前端</a>
+    <a class="page-title-link" href="/categories/前端/">前端</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/前端/CSS/">CSS</a>
     </h1>
 </div>
                         <div class="main-body-content">
@@ -147,14 +147,13 @@ _st('install','false# enter swiftype install key here','2.0.0');
     <time datetime="2016-03-19T16:00:00.000Z" itemprop="datePublished">2016-03-20</time>
 </a>
             
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/任务/">任务</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/任务/">任务</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 
         </div>
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="http://7xre66.com1.z0.glb.clouddn.com/jakeOwen-American-Country-Love-Song.jpg" alt=""><br>css的选择器是css中的基本内容，由于前些日子有一道笔试题中出现了一堆我没用过的选择器，所以这里对其进行一下总结。</p>
+            <p><img src="http://7xre66.com1.z0.glb.clouddn.com/jakeOwen-American-Country-Love-Song.jpg" alt=""><br>css的选择器是css中的基本内容，由于前些日子有一道笔试题中出现了一堆我没用过的选择器，所以这里对其进行一下总结，主要介绍各种选择器类型及用法，层叠的规则。</p>
 <a id="more"></a>
-<p>##CSS选择器和层叠</p>
-<h3 id="1-选择器"><a href="#1-选择器" class="headerlink" title="1.选择器"></a>1.选择器</h3><ul>
+<h2 id="CSS选择器和层叠"><a href="#CSS选择器和层叠" class="headerlink" title="CSS选择器和层叠"></a>CSS选择器和层叠</h2><h3 id="1-选择器"><a href="#1-选择器" class="headerlink" title="1.选择器"></a>1.选择器</h3><ul>
 <li><h4 id="上下文选择器"><a href="#上下文选择器" class="headerlink" title="上下文选择器"></a>上下文选择器</h4><ul>
 <li>元素选择器</li>
 <li>后代组合式选择器(descendant combinator selector)</li>
@@ -246,8 +245,7 @@ _st('install','false# enter swiftype install key here','2.0.0');
 </ol>
 </li>
 </ul>
-<p>###2.层叠</p>
-<ul>
+<h3 id="2-层叠"><a href="#2-层叠" class="headerlink" title="2.层叠"></a>2.层叠</h3><ul>
 <li><h4 id="特殊性"><a href="#特殊性" class="headerlink" title="特殊性"></a>特殊性</h4><p>  选择器的特殊性由选择器本身的组件确定。特殊性值表述为4个部分，如：0，0，0，0。一个选择器的具体特殊性如下确定：</p>
 <ul>
 <li><p>对于选择器中给定的各个ID属性值，加0，1，0，0。</p>
@@ -264,8 +262,8 @@ _st('install','false# enter swiftype install key here','2.0.0');
 </li>
 <li><h4 id="重要性"><a href="#重要性" class="headerlink" title="重要性"></a>重要性</h4><p>有时某个声明可能非常重要，超过了所有其他声明。CSS2.1称之为重要声明（原因显而易见），并允许在这些声明的结束分号之前插入！important来标志。例如：</p>
 <pre><code>p.dark {color:#333 !important; background: white;}
-</code></pre></li>
-<li><h4 id="层叠"><a href="#层叠" class="headerlink" title="层叠"></a>层叠</h4>CSS就叫做层叠样式表，让样式层叠在一起，这是通过结合继承和特殊性做到的。CSS2.1的层叠规则相当简单：<blockquote>
+</code></pre><h4 id="层叠"><a href="#层叠" class="headerlink" title="层叠"></a>层叠</h4></li>
+<li>CSS就叫做层叠样式表，让样式层叠在一起，这是通过结合继承和特殊性做到的。CSS2.1的层叠规则相当简单：<blockquote>
 <p>找出所有相关的规则，这些规则都包含与一个给定元素匹配的选择器。</p>
 </blockquote>
 </li>
@@ -280,6 +278,9 @@ _st('install','false# enter swiftype install key here','2.0.0');
 <li><p>按<strong>出现顺序</strong>对应用到给定元素的所有声明排序。一个声明在样式表或文档中越后出现，它的权重就越大。如果样式表中有导入的样式表，一般认为出现在导入样式表中的声明在前，主样式表中的所有声明在后。</p>
 </li>
 </ol>
+<blockquote>
+<p>更多示例和参考：<br>1.<a href="http://www.ayqy.net/doc/css2-1/cascade.html" target="_blank" rel="external">http://www.ayqy.net/doc/css2-1/cascade.html</a><br>2.<a href="http://cdn1.w3cplus.com/css/advanced-html-css-lesson3-complex-selectors.html" target="_blank" rel="external">http://cdn1.w3cplus.com/css/advanced-html-css-lesson3-complex-selectors.html</a></p>
+</blockquote>
 
         </div>
         <footer class="article-footer">
@@ -500,7 +501,7 @@ _st('install','false# enter swiftype install key here','2.0.0');
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/CSS/">CSS</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/前端/">前端</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/前端/CSS/">CSS</a></p>
                             <p class="item-title"><a href="/2016/04/05/CSS选择器优化/" class="title">CSS选择器优化</a></p>
                             <p class="item-date"><time datetime="2016-04-04T16:00:00.000Z" itemprop="datePublished">2016-04-05</time></p>
                         </div>
@@ -519,7 +520,7 @@ _st('install','false# enter swiftype install key here','2.0.0');
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/前端/">前端</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/前端/">前端</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/前端/JavaScript/">JavaScript</a></p>
                             <p class="item-title"><a href="/2016/04/05/NaN/" class="title">关于NaN</a></p>
                             <p class="item-date"><time datetime="2016-04-04T16:00:00.000Z" itemprop="datePublished">2016-04-05</time></p>
                         </div>
@@ -538,7 +539,7 @@ _st('install','false# enter swiftype install key here','2.0.0');
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/前端/">前端</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/前端/">前端</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/前端/CSS/">CSS</a></p>
                             <p class="item-title"><a href="/2016/03/20/CSS选择器/" class="title">CSS选择器和层叠</a></p>
                             <p class="item-date"><time datetime="2016-03-19T16:00:00.000Z" itemprop="datePublished">2016-03-20</time></p>
                         </div>
@@ -591,7 +592,7 @@ _st('install','false# enter swiftype install key here','2.0.0');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">5</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/CSS/">CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/JavaScript/">JavaScript</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -611,7 +612,7 @@ _st('install','false# enter swiftype install key here','2.0.0');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/任务/">任务</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/常用工具/">常用工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/示例/">示例</a><span class="tag-list-count">2</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/任务/">任务</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/常用工具/">常用工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/示例/">示例</a><span class="tag-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -621,7 +622,7 @@ _st('install','false# enter swiftype install key here','2.0.0');
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/任务/" style="font-size: 16.67px;">任务</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/常用工具/" style="font-size: 10px;">常用工具</a> <a href="/tags/示例/" style="font-size: 13.33px;">示例</a>
+            <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/任务/" style="font-size: 16.67px;">任务</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/常用工具/" style="font-size: 10px;">常用工具</a> <a href="/tags/示例/" style="font-size: 13.33px;">示例</a>
         </div>
     </div>
 

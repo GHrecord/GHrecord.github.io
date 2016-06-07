@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8">
     
-    <title>归档: 2016/1 | GHrecord</title>
+    <title>分类：: JavaScript | GHrecord</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="description" content="郭亨的博客">
 <meta property="og:type" content="website">
 <meta property="og:title" content="GHrecord">
-<meta property="og:url" content="http://yoursite.com/archives/2016/01/index.html">
+<meta property="og:url" content="http://yoursite.com/categories/前端/JavaScript/index.html">
 <meta property="og:site_name" content="GHrecord">
 <meta property="og:description" content="郭亨的博客">
 <meta name="twitter:card" content="summary">
@@ -120,7 +120,7 @@ _st('install','false# enter swiftype install key here','2.0.0');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-archive"></i>归档: 2016/1
+    <i class="icon fa fa-folder-open"></i>分类：: <em class="page-title-link">JavaScript</em>
     </h1>
 </div>
                         <div class="main-body-content">
@@ -143,17 +143,17 @@ _st('install','false# enter swiftype install key here','2.0.0');
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2016/01/31/ch1/" class="thumbnail">
+        <a href="/2016/04/05/NaN/" class="thumbnail">
     
     
-        <span style="background-image:url(http://7xre66.com1.z0.glb.clouddn.com/%E7%BD%91%E6%98%93%E5%89%AA%E6%8A%A5.png)" alt="收藏夹工具示例" class="thumbnail-image"></span>
+        <span style="background-image:url(http://7xre66.com1.z0.glb.clouddn.com/Carrie-Underwood-Church-Bells.jpg)" alt="关于NaN" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="ds-thread-count" data-thread-key="2016/01/31/ch1/">0</span>
+        <span class="ds-thread-count" data-thread-key="2016/04/05/NaN/">0</span>
     
 </span>
 
@@ -162,63 +162,25 @@ _st('install','false# enter swiftype install key here','2.0.0');
         
         <div class="article-meta">
             <p class="category">
-            <a class="article-category-link" href="/categories/前端/">前端</a>
+            <a class="article-category-link" href="/categories/前端/">前端</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/前端/JavaScript/">JavaScript</a>
             </p>
-            <p class="date"><time datetime="2016-01-30T16:00:00.000Z" itemprop="datePublished">2016-01-31</time></p>
+            <p class="date"><time datetime="2016-04-04T16:00:00.000Z" itemprop="datePublished">2016-04-05</time></p>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2016/01/31/ch1/">收藏夹工具示例</a>
+        <a href="/2016/04/05/NaN/">关于NaN</a>
         </h1>
     
 
         <p class="article-excerpt">
-            浏览器的收藏夹也会执行javascript代码，一段简单的代码实现右键收藏，删掉网页Img元素图片。同类收藏夹工具介绍。
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/01/10/hello-world/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="ds-thread-count" data-thread-key="2016/01/10/hello-world/">0</span>
-    
-</span>
-
-    
-</a>
-        
-        <div class="article-meta">
-            <p class="category">
-            
-            </p>
-            <p class="date"><time datetime="2016-01-09T16:00:00.000Z" itemprop="datePublished">2016-01-10</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/01/10/hello-world/">Hello World</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+            事情起源是这样的，我在做任务十五的时候对一个空气质量输入框输入的数字进行验证的时候，如果用户输入的不是一个整数，那么使用parseInt转换后的应该是NaN,所以有了下面的代码:
+if(num == NaN){alert(&quot;空气质量指数必须为整数&quot;);}
+num确实是NaN,但是上面的条件的结果是false，但是问题在哪呢？
+console.log(NaN == NaN);//false
+结果竟然是false，是没有严格等于吗？
+console.log(NaN === NaN)//false
+果然不是。
         </p>
     </div>
 </article>
@@ -228,6 +190,7 @@ _st('install','false# enter swiftype install key here','2.0.0');
 
 
     </div></section>
+
 
 
 

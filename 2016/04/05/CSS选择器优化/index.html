@@ -8,38 +8,47 @@
     
         <meta name="keywords" content="任务,前端,CSS" />
     
-    <meta name="description" content="前面花了几个篇幅着重介绍了CSS的选择器的使用，我将其分成三个部分：CSS基本选择器、CSS属性选择器以及CSS伪类选择器。那么今天我主要想和大家一起来学习——CSS选择器方面的性能优化。因为对性能这一块一直都是很弱的，所以今天先从选择器开始入手，加强自己。如果你也感兴趣那就跟我一起来吧。
+    <meta name="description" content="pre, pre code {
+    display: block;
+    padding: 0.5em;
+    background: #002b36;
+    color: #839496;
+}
 
-	
 
+转载出处：W3CPLUS
 
-
-	浏览器如何识别你的选择器
-首先我们需要清楚，浏览器是如何读取选择器，以识别样式，">
+    前面花了几个篇幅着重介绍了CSS的选择器的使用，我将其分成三个部分：CSS基本选择器、CSS属性选择器以及CSS伪类选择器。那么今天我主要想和">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS选择器优化">
 <meta property="og:url" content="http://yoursite.com/2016/04/05/CSS选择器优化/index.html">
 <meta property="og:site_name" content="GHrecord">
-<meta property="og:description" content="前面花了几个篇幅着重介绍了CSS的选择器的使用，我将其分成三个部分：CSS基本选择器、CSS属性选择器以及CSS伪类选择器。那么今天我主要想和大家一起来学习——CSS选择器方面的性能优化。因为对性能这一块一直都是很弱的，所以今天先从选择器开始入手，加强自己。如果你也感兴趣那就跟我一起来吧。
+<meta property="og:description" content="pre, pre code {
+    display: block;
+    padding: 0.5em;
+    background: #002b36;
+    color: #839496;
+}
 
-	
 
+转载出处：W3CPLUS
 
-
-	浏览器如何识别你的选择器
-首先我们需要清楚，浏览器是如何读取选择器，以识别样式，">
+    前面花了几个篇幅着重介绍了CSS的选择器的使用，我将其分成三个部分：CSS基本选择器、CSS属性选择器以及CSS伪类选择器。那么今天我主要想和">
 <meta property="og:image" content="http://cdn.w3cplus.com/cdn/farfuture/h75bqcQ1Dw0hG-apEsXY8_jQx6mMkcWiHXhA3HEQe9I/mtime:1341237535/sites/default/files/css-select-data-chart.png">
-<meta property="og:updated_time" content="2016-04-10T02:47:11.737Z">
+<meta property="og:updated_time" content="2016-04-10T02:55:57.237Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS选择器优化">
-<meta name="twitter:description" content="前面花了几个篇幅着重介绍了CSS的选择器的使用，我将其分成三个部分：CSS基本选择器、CSS属性选择器以及CSS伪类选择器。那么今天我主要想和大家一起来学习——CSS选择器方面的性能优化。因为对性能这一块一直都是很弱的，所以今天先从选择器开始入手，加强自己。如果你也感兴趣那就跟我一起来吧。
+<meta name="twitter:description" content="pre, pre code {
+    display: block;
+    padding: 0.5em;
+    background: #002b36;
+    color: #839496;
+}
 
-	
 
+转载出处：W3CPLUS
 
-
-	浏览器如何识别你的选择器
-首先我们需要清楚，浏览器是如何读取选择器，以识别样式，">
+    前面花了几个篇幅着重介绍了CSS的选择器的使用，我将其分成三个部分：CSS基本选择器、CSS属性选择器以及CSS伪类选择器。那么今天我主要想和">
 <meta name="twitter:image" content="http://cdn.w3cplus.com/cdn/farfuture/h75bqcQ1Dw0hG-apEsXY8_jQx6mMkcWiHXhA3HEQe9I/mtime:1341237535/sites/default/files/css-select-data-chart.png">
     
 
@@ -87,7 +96,7 @@
                                     <a class="main-nav-list-link" href="/">主页</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/CSS/">CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/前端/">前端</a></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/前端/">前端</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/前端/CSS/">CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/前端/JavaScript/">JavaScript</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/project">任务</a>
@@ -146,7 +155,7 @@ _st('install','false# enter swiftype install key here','2.0.0');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/CSS/">CSS</a>
+    <a class="page-title-link" href="/categories/前端/">前端</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/前端/CSS/">CSS</a>
     </h1>
 </div>
                         <div class="main-body-content">
@@ -172,8 +181,19 @@ _st('install','false# enter swiftype install key here','2.0.0');
 
         </div>
         <div class="article-entry" itemprop="articleBody">
-            
-
+            <!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	pre, pre code {
+    display: block;
+    padding: 0.5em;
+    background: #002b36;
+    color: #839496;
+}</style>
+</head>
+<body>
+<p>转载出处：<strong><a href="http://www.w3cplus.com" target="_blank">W3CPLUS</a></strong></p>
 <div class="body-content clearfix">
     <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><z>前面花了几个篇幅着重介绍了<z>CSS</z>的选择器的使用，我将其分成三个部分：</z><a href="http://www.w3cplus.com/css3/basic-selectors" target="_blank">CSS基本选择器</a>、<a href="http://www.w3cplus.com/css3/attribute-selectors" target="_blank">CSS属性选择器</a>以及<a href="http://www.w3cplus.com/css3/pseudo-class-selector" target="_blank">CSS伪类选择器</a><z>。那么今天我主要想和大家一起来学习——<z>CSS</z>选择器方面的性能优化。因为对性能这一块一直都是很弱的，所以今天先从选择器开始入手，加强自己。如果你也感兴趣那就跟我一起来吧。</z></p>
 <div class="gg-ad clearfix" style="text-align:center;">
@@ -315,8 +335,11 @@ var cpro_id = "u1490106";
 		<a href="http://www.thebrightlines.com/2010/07/28/css-performance-who-cares/" target="_blank">CSS performance, who cares?</a></li>
 	<li>
 		<a href="http://net.tutsplus.com/tutorials/html-css-techniques/the-30-css-selectors-you-must-memorize/" target="_blank">The 30 CSS Selectors you Must Memorize </a></li>
-</ol><p>如需转载烦请注明出处：<strong><a href="http://www.w3cplus.com" target="_blank">W3CPLUS</a></strong></p>
-</div></div></div>  </div>
+</ol>
+
+</div></div></div></div></body>
+</html>
+
         </div>
         <footer class="article-footer">
             
@@ -526,7 +549,7 @@ var cpro_id = "u1490106";
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/CSS/">CSS</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/前端/">前端</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/前端/CSS/">CSS</a></p>
                             <p class="item-title"><a href="/2016/04/05/CSS选择器优化/" class="title">CSS选择器优化</a></p>
                             <p class="item-date"><time datetime="2016-04-04T16:00:00.000Z" itemprop="datePublished">2016-04-05</time></p>
                         </div>
@@ -545,7 +568,7 @@ var cpro_id = "u1490106";
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/前端/">前端</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/前端/">前端</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/前端/JavaScript/">JavaScript</a></p>
                             <p class="item-title"><a href="/2016/04/05/NaN/" class="title">关于NaN</a></p>
                             <p class="item-date"><time datetime="2016-04-04T16:00:00.000Z" itemprop="datePublished">2016-04-05</time></p>
                         </div>
@@ -564,7 +587,7 @@ var cpro_id = "u1490106";
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/前端/">前端</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/前端/">前端</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/前端/CSS/">CSS</a></p>
                             <p class="item-title"><a href="/2016/03/20/CSS选择器/" class="title">CSS选择器和层叠</a></p>
                             <p class="item-date"><time datetime="2016-03-19T16:00:00.000Z" itemprop="datePublished">2016-03-20</time></p>
                         </div>
@@ -617,7 +640,7 @@ var cpro_id = "u1490106";
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">5</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/CSS/">CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/JavaScript/">JavaScript</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -637,7 +660,7 @@ var cpro_id = "u1490106";
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/任务/">任务</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/常用工具/">常用工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/示例/">示例</a><span class="tag-list-count">2</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/任务/">任务</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/常用工具/">常用工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/示例/">示例</a><span class="tag-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -647,7 +670,7 @@ var cpro_id = "u1490106";
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/任务/" style="font-size: 16.67px;">任务</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/常用工具/" style="font-size: 10px;">常用工具</a> <a href="/tags/示例/" style="font-size: 13.33px;">示例</a>
+            <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/任务/" style="font-size: 16.67px;">任务</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/常用工具/" style="font-size: 10px;">常用工具</a> <a href="/tags/示例/" style="font-size: 13.33px;">示例</a>
         </div>
     </div>
 
